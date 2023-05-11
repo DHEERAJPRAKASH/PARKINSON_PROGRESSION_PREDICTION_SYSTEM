@@ -1,0 +1,41 @@
+body{
+background: rgb(2,0,36);
+background: linear-gradient(38deg, rgba(2,0,36,1) 0%, rgba(9,26,121,1) 46%, rgba(0,212,255,1) 100%);
+}
+h1{
+text-align:center;
+color: navajowhite;}
+p{
+    color: darkorange;
+    font-size:35px;
+}
+ol{
+padding:10px 20vw;
+color:white;
+font-weight:900;
+font-size:25px;}
+
+.content1{
+background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 16.5px );
+    -webkit-backdrop-filter: blur( 8.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 0px 40px;
+    margin: 0px 50px;
+    }
+.buttons{
+background-color:green;
+color:white;
+border-radius:25px;
+font-size:30px;
+font-weight:600;
+margin-bottom:25px;
+}
+.buttons a{
+
+    color: white;
+    text-decoration: none;
+
+    }

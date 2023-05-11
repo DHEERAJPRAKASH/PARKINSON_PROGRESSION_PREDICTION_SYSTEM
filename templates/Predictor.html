@@ -1,0 +1,46 @@
+{% extends 'Base.html' %}
+{% block title %}
+Predicted Values
+{% endblock %}
+{% block content %}
+<!--{{ super()}}-->
+<link rel="stylesheet" href="{{url_for('static',filename='css/Navigation.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/ViewData.css')}}">
+
+
+<div class="forms">
+    <form method="POST" action="/getTable">
+        <a href="/home">Home</a>
+        <a href="/">Upload</a>
+        <input type="submit" name="button" value="Test Data">
+        <input type="submit" name="button" value="Protein Data">
+        <input type="submit" name="button" value="Peptide Data">
+        <a href="/getData">Predictor</a>
+
+    </form>
+</div>
+{% if data %}
+<center>
+    <h1 style="color:navy;font-weight:700;">Predicted Values</h1>
+    <h3 style="color:red;">More the Rating - Higher the Risk !!!</h3>
+    <div class="content">
+        {{data|safe}}
+    </div>
+</center>
+{% else %}
+
+<div class="elsepart">
+    <h1>
+        <p>{{message}}</p>
+        <ul>
+            <li>Testing Dataset</li>
+            <li>Protein Dataset</li>
+            <li>Peptide Dataset</li>
+        </ul>
+    </h1>
+</div>
+
+{% endif %}
+{% endblock %}
+
+

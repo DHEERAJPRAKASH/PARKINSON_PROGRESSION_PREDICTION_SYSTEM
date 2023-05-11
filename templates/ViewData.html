@@ -1,0 +1,35 @@
+{% extends 'Base.html' %}
+{% block title %}
+{{titles}}
+{% endblock %}
+
+{% block content %}
+{{ super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='css/Navigation.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/ViewData.css')}}">
+
+<div class="forms">
+    <form method="POST" action="/getTable">
+        <a href="/home">Home</a>
+        <a href="/">Upload</a>
+        <input type="submit" name="button" value="Test Data">
+        <input type="submit" name="button" value="Protein Data">
+        <input type="submit" name="button" value="Peptide Data">
+        <a href="/getData">Predictor</a>
+
+    </form>
+</div>
+
+<center>
+    <h1 style="color:navy;font-weight:700;">{{titles}}</h1>
+    {% if message %}
+    <div class="content">
+        <p>{{ message|safe }}</p>
+    </div>
+    {% else %}
+    <div class="danger">
+        <h2>Click any of the Dataset to Load the Corresponding Data</h2>
+    </div>
+    {% endif %}
+</center>
+{% endblock %}

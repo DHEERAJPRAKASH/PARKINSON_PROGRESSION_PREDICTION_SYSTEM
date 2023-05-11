@@ -1,0 +1,13 @@
+{% extends 'Base.html' %}
+{% block navbar %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/Navigation.css')}}">
+
+<div class="forms">
+    <form method="POST" action="/getTable">
+        <a href="/">Home</a>
+        <input type="submit" name="button" value="Test Data">
+        <input type="submit" name="button" value="Protein Data">
+        <input type="submit" name="button" value="Peptide Data">
+    </form>
+</div>
+{% endblock %}

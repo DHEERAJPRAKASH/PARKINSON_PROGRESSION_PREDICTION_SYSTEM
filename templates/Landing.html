@@ -1,0 +1,52 @@
+{% block content %}
+<div class="Landing">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/Navigation.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/ViewData.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/Landing.css')}}">
+
+    <div class="forms">
+        <form method="POST" action="/getTable">
+            <a href="/home">Home</a>
+            <a href="/">Upload</a>
+            <input type="submit" name="button" value="Test Data">
+            <input type="submit" name="button" value="Protein Data">
+            <input type="submit" name="button" value="Peptide Data">
+            <a href="/getData">Predictor</a>
+        </form>
+    </div>
+    <div class="Main">
+        <center>
+            <h1>Parkinson's Disease Progression Prediction System</h1>
+
+        </center>
+        <div class="content1">
+            <p>
+                Parkinson Progression Detection System:
+            <ol>
+
+
+                <li>A state-of-the-art solution for predicting the progression of Parkinson's disease.</li>
+                <li>Utilizes advanced machine learning algorithms to analyze patient data and provide accurate
+                    predictions.
+                </li>
+                <li>Helps healthcare professionals make informed decisions about treatment plans and interventions.</li>
+                <li>Offers a non-invasive and cost-effective method to monitor and track the progression of Parkinson's
+                    disease.
+                </li>
+                <li>Provides early detection of potential worsening of symptoms, allowing for timely interventions and
+                    personalized care.
+                </li>
+
+
+            </ol>
+            </p>
+            <div class="buttons">
+                <center><a href="/">Upload Files</a></center>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+
+.forms form{
+display:flex;
+justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background:rgb(51, 58, 65);
+}
+.forms a{
+    margin: 0px 7%;
+    text-decoration: none;
+    color: wheat;
+    font-size:20px;
+    font-weight: 800;
+ }
+.forms input{
+background:none;
+border:none;
+margin:15px 4%;
+color:white;
+font-size:15px;
+font-weight: 800;
+}
