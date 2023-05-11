@@ -58,7 +58,7 @@ def viewData():
         test = pd.read_csv("static/excel/test.csv")
         test_proteins = pd.read_csv("static/excel/test_proteins.csv")
         test_peptides = pd.read_csv("static/excel/test_peptides.csv")
-        sample_submission = pd.read_csv("static/datas/sample_submission.csv")
+        sample_submission = pd.read_csv("static/excel/sample_submission.csv")
 
         df = test[['visit_id']].drop_duplicates('visit_id')
         pred_0 = features(df[['visit_id']], test_proteins, test_peptides, 0)
@@ -129,4 +129,4 @@ def index():
             return render_template('ViewData.html', message=message, titles=titles)
     return render_template('ViewData.html')
 if __name__=='__main__':
-    app.run(host="0.0.0.0",port=5000)
+    app.run(debug=True)
